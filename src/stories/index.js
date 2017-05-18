@@ -4,6 +4,7 @@ import Button from './Button';
 import Welcome from './Welcome';
 
 import 'semantic-ui-css/semantic.min.css';
+import MainLayout from '../components/MainLayout';
 import MainNavigation from '../components/MainNavigation';
 import SecondaryNavigation from '../components/SecondaryNavigation';
 
@@ -21,6 +22,9 @@ storiesOf('Button', module)
   ));
 
 storiesOf('My Components', module)
+  .add('MainLayout', () => (
+    <MainLayout />
+  ))
   .add('MainNavigation', () => (
     <MainNavigation />
   ))
