@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
+import { linkTo } from '@kadira/storybook';
 
 export default class MenuExampleInverted extends Component {
   state = { activeItem: 'home' }
@@ -11,9 +12,9 @@ export default class MenuExampleInverted extends Component {
 
     return (
       <Menu inverted>
-        <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-        <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+        <Menu.Item name='home' active={activeItem === 'home'} onClick={linkTo("My Pages", "HomePage")} />
+        <Menu.Item name='messages' active={activeItem === 'messages'} onClick={linkTo("My Pages", "MessagesPage")} />
+        <Menu.Item name='friends' active={activeItem === 'friends'} onClick={linkTo("My Pages", "FriendsPage")} />
       </Menu>
     )
   }
