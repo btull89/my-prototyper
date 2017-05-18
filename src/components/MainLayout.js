@@ -3,9 +3,9 @@ import { Grid } from 'semantic-ui-react';
 import MainNavigation from './MainNavigation';
 import SecondaryNavigation from './SecondaryNavigation';
 
-export default ({ children }) => (
+export default ({ children, activeItem }) => (
     <div>
-        <MainNavigation />
+        <MainNavigation activeItem={activeItem} />
         <Grid padded>
             <Grid.Row>
                 <Grid.Column width={4}>

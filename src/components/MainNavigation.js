@@ -3,12 +3,8 @@ import { Menu } from 'semantic-ui-react'
 import { linkTo } from '@kadira/storybook';
 
 export default class MenuExampleInverted extends Component {
-  state = { activeItem: 'home' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render() {
-    const { activeItem } = this.state
+    const { activeItem } = this.props;
 
     return (
       <Menu inverted>
