@@ -3,7 +3,7 @@ import { Grid } from 'semantic-ui-react';
 import MainNavigation from './MainNavigation';
 import SecondaryNavigation from './SecondaryNavigation';
 
-export default () => (
+export default ({ children }) => (
     <div>
         <MainNavigation />
         <Grid padded>
@@ -12,7 +12,7 @@ export default () => (
                     <SecondaryNavigation />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                    <p>This is the main content area</p>
+                    { children }
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
